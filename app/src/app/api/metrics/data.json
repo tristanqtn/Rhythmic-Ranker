@@ -1,0 +1,32 @@
+{
+  "articles": [
+    {
+      "id": "9b3def4d-3b7d-4bad-9fdd-2b0d7b3dcb6d",
+      "title": "Sergei's article",
+      "content": "Content of the article.",
+      "date": "18/10/2023",
+      "author": "Sergei Kudinov"
+    },
+    {
+      "id": "6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b",
+      "title": "Alex's article",
+      "content": "Content of the article.",
+      "date": "06/06/2023",
+      "author": "Alex Waerniers"
+    },
+    {
+      "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+      "title": "Tristan's article",
+      "content": "Content of the article.",
+      "date": "14/03/2023",
+      "author": "Tristan Querton"
+    },
+    {
+      "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
+      "title": "Apo's article",
+      "content": "Content of the article.",
+      "date": "20/12/2022",
+      "author": "Apolline Petit"
+    }
+  ]
+}
