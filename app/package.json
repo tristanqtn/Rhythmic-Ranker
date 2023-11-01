@@ -13,6 +13,8 @@
     "chai": "^4.3.10",
     "chai-http": "^4.4.0",
     "mocha": "^10.2.0",
+    "mongodb": "^6.2.0",
+    "mongoose": "^8.0.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
