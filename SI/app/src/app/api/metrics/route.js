@@ -1,4 +1,3 @@
-const { MongoClient } = require("mongodb");
 import { NextResponse } from "next/server";
 
 const mongoose = require("mongoose");
@@ -20,10 +19,13 @@ export async function GET(request) {
 
 export async function POST(request) {
   const message = await request.json();
+  var response;
   try {
     Metrics.create(message);
+    response = NextResponse.json({ code: "200", message: "ok" });
   } catch (e) {
-    console.log(e.message);
+    console.log(e._message);
   }
-  return NextResponse.json(await Metrics.find());
+  console.log("RES" + response);
+  return response;
 }

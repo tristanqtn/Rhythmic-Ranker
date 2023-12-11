@@ -9,6 +9,7 @@ const metrics_schema = new mongoose.Schema({
   mesured_at: {
     type: Date,
     immutable: true,
+    required: true,
   },
 
   content: {
