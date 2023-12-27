@@ -1,0 +1,16 @@
+# values.yaml
+replicaCount: 1
+image:
+  repository: quay.io/influxdb/influxdb
+  tag: "2.0.0-beta"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 9999
+  nodePort: 31234
+
+names:
+  deployment: "influx-stateful-deployment"
+  service: "influx-access-service"
+  app: "influx-ppe"

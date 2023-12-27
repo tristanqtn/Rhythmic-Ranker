@@ -1,0 +1,30 @@
+# templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Values.names.deployment }}
+  name: {{ .Values.names.deployment }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.names.deployment }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.names.deployment }}
+    spec:
+      containers:
+        - name: nodejs-app
+          image: "ppe_api"
+          imagePullPolicy: {{ .Values.nodejs.image.pullPolicy }}
+          env:
+            - name: INFLUX_URL
+              value: "http://{{ .Values.names.serviceInfluxDB }}:{{ .Values.service.port }}"
+            - name: INFLUX_TOKEN
+              value: {{ .Values.influxdb.token }}
+            - name: INFLUX_ORG
+              value: {{ .Values.influxdb.org }}
+            - name: INFLUX_BUCKET
+              value: {{ .Values.influxdb.bucket }}

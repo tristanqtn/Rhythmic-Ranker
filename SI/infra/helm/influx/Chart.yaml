@@ -1,0 +1,5 @@
+# Chart.yaml
+apiVersion: v2
+name: influxdb-chart
+description: A Helm chart for deploying InfluxDB StatefulSet and Service
+version: 0.1.0

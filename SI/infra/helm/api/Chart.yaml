@@ -1,0 +1,5 @@
+# Chart.yaml
+apiVersion: v2
+name: nodejs-influxdb-app
+description: A Helm chart for deploying Node.js app with InfluxDB access
+version: 0.1.0
