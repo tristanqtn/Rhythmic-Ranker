@@ -1,0 +1,10 @@
+.dockerignore
+.eslintignore
+.eslintrc.json
+.gitignore
+CHANGELOG.md
+Dockerfile
+README.md
+/node_modules
+/test
+

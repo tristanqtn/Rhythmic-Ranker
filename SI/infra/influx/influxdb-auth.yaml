@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: influxdb-auth-ppe
+data:
+  url: aHR0cDovL2luZmx1eGRiLXBwZTo5OTk5
+  username: dXNlcg==
+  password: cGFzc3dvcmQ=
+  org: cHBl
+  bucket: bWV0cmljcw==

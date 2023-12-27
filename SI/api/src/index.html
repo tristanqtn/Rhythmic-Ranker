@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>DEVOPS USER API</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <script src=""></script>
+  <body>
+    <div class="">
+      <h1>Welcome to Tristan's and Apolline's userapi</h1>
+      <p>Complete API documentation has been created using Swagger</p>
+      <p>
+        Here's a table reviewing all available API methods and the path assigned
+        to these methods:
+      </p>
+      <br />
+      <p>CRUD Operations</p>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Path</th>
+          <th>Parameter</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>/user</td>
+          <td>none</td>
+          <td>
+            use this method on given path to add a new user to the REDIS DB. In
+            the post request send a JSON body containing following information:
+            {"username" = "", "firstname" = "", "lastname"=""}
+          </td>
+        </tr>
+        <tr>
+          <td>PUT</td>
+          <td>/user/updates</td>
+          <td>none</td>
+          <td>
+            update the information of an existing user. Send the following json
+            body: {"username" = "", "firstname" = "", "lastname"=""}
+          </td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/user/:username</td>
+          <td>username</td>
+          <td>
+            use this method on given path to retrieve a specific user (giving
+            his username in URL) from the REDIS DB.
+          </td>
+        </tr>
+        <tr>
+          <td>DELETE</td>
+          <td>/user/:username</td>
+          <td>username</td>
+
+          <td>
+            use this method on given path to delete a specific user (giving his
+            username in URL ) from the REDIS DB.
+          </td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/user/keys</td>
+          <td>none</td>
+          <td>
+            use this method on given path to retrieve all keys present in the
+            REDIS DB.
+          </td>
+        </tr>
+      </table>
+      <br />
+      <p>Other Routes</p>
+      <br />
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Path</th>
+          <th>Parameter</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/api-docs</td>
+          <td>none</td>
+          <td>obtain complete documentation of the API</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/health</td>
+          <td>none</td>
+          <td>obtain the health of the application</td>
+        </tr>
+      </table>
+
+      <br />
+      <p>
+        <strong>IMPORTANT</strong>: This application requires a REDIS DB to work
+        perfectly. If you are using this application on AZURE or in a single
+        Docker container not linked with a REDIS container, API methods won't
+        work for you.
+      </p>
+      <br />
+      <div>
+        <p>
+          <strong>LINKS: </strong>except for the POST: /user/ endpoint other API
+          endpoints require at least one database entry to be used.
+        </p>
+        <ul>
+          <li><a href="/api-docs">API Docs</a></li>
+          <li><a href="/user/keys">Keys endpoint</a></li>
+          <li><a href="/health">Health endpoint</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
