@@ -13,8 +13,7 @@
   <script src=""></script>
   <body>
     <div class="">
-      <h1>Welcome to Tristan's and Apolline's userapi</h1>
-      <p>Complete API documentation has been created using Swagger</p>
+      <h1>Welcome to PPE API</h1>
       <p>
         Here's a table reviewing all available API methods and the path assigned
         to these methods:
@@ -30,49 +29,19 @@
         </tr>
         <tr>
           <td>POST</td>
-          <td>/user</td>
+          <td>/metrics</td>
           <td>none</td>
           <td>
-            use this method on given path to add a new user to the REDIS DB. In
-            the post request send a JSON body containing following information:
-            {"username" = "", "firstname" = "", "lastname"=""}
-          </td>
-        </tr>
-        <tr>
-          <td>PUT</td>
-          <td>/user/updates</td>
-          <td>none</td>
-          <td>
-            update the information of an existing user. Send the following json
-            body: {"username" = "", "firstname" = "", "lastname"=""}
+            use this method on given path to add a new metric measurement to the
+            Influx DB. In the post request send a JSON body containing following
+            information: { "sensor": "height", "measurement": 3 }
           </td>
         </tr>
         <tr>
           <td>GET</td>
-          <td>/user/:username</td>
-          <td>username</td>
+          <td>/metrics</td>
           <td>
-            use this method on given path to retrieve a specific user (giving
-            his username in URL) from the REDIS DB.
-          </td>
-        </tr>
-        <tr>
-          <td>DELETE</td>
-          <td>/user/:username</td>
-          <td>username</td>
-
-          <td>
-            use this method on given path to delete a specific user (giving his
-            username in URL ) from the REDIS DB.
-          </td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>/user/keys</td>
-          <td>none</td>
-          <td>
-            use this method on given path to retrieve all keys present in the
-            REDIS DB.
+            use this method on given path to retrieve all Influx DB entries.
           </td>
         </tr>
       </table>
@@ -94,9 +63,15 @@
         </tr>
         <tr>
           <td>GET</td>
-          <td>/health</td>
+          <td>/health/influx</td>
           <td>none</td>
-          <td>obtain the health of the application</td>
+          <td>obtain the health of the INFLUX DB instance</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/health/api</td>
+          <td>none</td>
+          <td>obtain the health of the API</td>
         </tr>
       </table>
 
@@ -115,8 +90,8 @@
         </p>
         <ul>
           <li><a href="/api-docs">API Docs</a></li>
-          <li><a href="/user/keys">Keys endpoint</a></li>
-          <li><a href="/health">Health endpoint</a></li>
+          <li><a href="/health/influx">API - Health endpoint</a></li>
+          <li><a href="/health/influx">INFLUX - Health endpoint</a></li>
         </ul>
       </div>
     </div>

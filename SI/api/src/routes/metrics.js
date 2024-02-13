@@ -49,7 +49,9 @@ userRouter
    * This function handles POST requests for the metric API.
    * @route GET /metrics
    * @group METRICS - Methods for the user API
-   * @examples {json} "{"username":"tristanqtn","firstname":"tristan","lastname":"querton"}"
+   * @examples {json} "{
+    "sensor": "test",
+    "measurement": 3}"
    * @returns {object} 200 succes - Returns an array containing all metrics
    * @returns {Error}  400 error - Problem occurs while reading influx
    */

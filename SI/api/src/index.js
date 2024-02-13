@@ -41,7 +41,7 @@ app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/index.html")));
 app.use("/health", healthRouter);
 app.use("/metrics", userRouter);
 
-const server = app.listen(port, (err) => {
+const server = app.listen(port, "process.env.IP", (err) => {
   if (err) throw err;
   console.log("Server listening the port " + port);
 });

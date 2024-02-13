@@ -32,7 +32,7 @@ async function checkAPIHealth() {
 healthRouter
   /**
    * This function sends back the health of the INFLUXDB
-   * @route GET /health
+   * @route GET /health/influx
    * @group HEALTH - Methods for obtaining the current health state
    * @returns {object} 200 succes - INFLUXDB healthy
    * @returns {Error}  503 error - INFLUXDB unhealthy
@@ -59,7 +59,7 @@ healthRouter
 
   /**
    * This function sends back the health of the API
-   * @route GET /health
+   * @route GET /health/api
    * @group HEALTH - Methods for obtaining the current health state
    * @returns {object} 200 succes - API healthy
    * @returns {Error}  503 error - API unhealthy
