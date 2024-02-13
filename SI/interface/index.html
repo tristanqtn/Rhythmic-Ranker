@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfluxDB Interface</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Data will be displayed here -->
+    </div>
+
+    <script>
+      const eventSource = new EventSource("/api/stream");
+
+      eventSource.onmessage = function (event) {
+        const data = JSON.parse(event.data);
+        // Process 'data' and display it as needed
+        console.log(data);
+        // Example: Render data as a table
+        const table = document.createElement("table");
+        data.forEach((row) => {
+          const tr = document.createElement("tr");
+          Object.values(row).forEach((value) => {
+            const td = document.createElement("td");
+            td.textContent = value;
+            tr.appendChild(td);
+          });
+          table.appendChild(tr);
+        });
+        const appDiv = document.getElementById("app");
+        appDiv.innerHTML = ""; // Clear existing content
+        appDiv.appendChild(table);
+      };
+    </script>
+  </body>
+</html>
