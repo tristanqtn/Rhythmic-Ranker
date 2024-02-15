@@ -8,11 +8,13 @@ All notable changes to this project will be documented in this file.
 
 - Jury interface.
 - Metric Reception API documentation.
+- Automation scripts for deployment.
 
 ### Changed
 
 - Updated packages.
 - Env management.
+- Repo architecture of the software part.
 
 ## [1.0.0] - 2023-12-27
 
