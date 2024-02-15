@@ -1,4 +1,4 @@
-# RhythmicRanker: Gymnastics Scoring Solution
+# Rhythmic Ranker: Gymnastics Scoring Solution
 
 ## Overview
 
