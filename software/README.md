@@ -30,17 +30,19 @@ Ensure that your API is configured to connect to the deployed InfluxDB instance.
 
 ## Usage
 
-Deployment procedure for InfluxDB: [deployment](./infra/DEPLOY.md)
+Deployment procedure for InfluxDB: [deployment](./infrastructure/README.md)
 
-Deployment procedure for NodeJS API: [deployment](./api/DEPLOY.md)
+Deployment procedure for NodeJS API: [deployment](./api/README.md)
 
-Deployment procedure for Python Backend: [deployment](./interface/DEPLOY.md)
+Deployment procedure for Python Backend: [deployment](./interface/README.md)
 
 Please respect this order to deploy the solution.
 
 ## API Endpoints
 
 All useful API endpoints are detailed inside the application. Please refer to source [code](./api/src/index.html).
+
+All useful interface endpoints are detailed inside the application. Please refer to source [code](./interface/backend.py).
 
 ## Connecting to InfluxDB
 
