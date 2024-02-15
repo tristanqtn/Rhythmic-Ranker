@@ -1,4 +1,4 @@
-# Node.js API with InfluxDB Backend
+# Software for Rythmic Ranker
 
 ## Overview
 
@@ -31,7 +31,12 @@ Ensure that your API is configured to connect to the deployed InfluxDB instance.
 ## Usage
 
 Deployment procedure for InfluxDB: [deployment](./infra/DEPLOY.md)
+
 Deployment procedure for NodeJS API: [deployment](./api/DEPLOY.md)
+
+Deployment procedure for Python Backend: [deployment](./interface/DEPLOY.md)
+
+Please respect this order to deploy the solution.
 
 ## API Endpoints
 

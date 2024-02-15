@@ -15,13 +15,13 @@ Before running this application, ensure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/influxdb-interface.git
+   git clone https://github.com/tristanqtn/RhythmicRanker
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-    cd influxdb-interface
+   cd RhythmicRanker/SI/interface
    ```
 
 3. Install the required Python packages:
@@ -44,14 +44,14 @@ Create a .env file in the root directory of the project and specify the required
 Start the Flask server:
 
 ```bash
-python app.py
+python backend.py
 ```
 
 Open your web browser and navigate to http://localhost:5000.
 
 You should see the data from your InfluxDB database displayed in real-time on the webpage.
 
-Configuration
+**Configuration:**
 
 INFLUXDB_URL: The URL of your InfluxDB instance.
 
