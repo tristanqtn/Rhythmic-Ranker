@@ -85,6 +85,20 @@ helm status influxdb
 
 Refer to the official Helm chart documentation for additional troubleshooting guidance and advanced configuration options.
 
+## Automation
+
+An automation script for the deployment of this micro service. To run it place yourself in the current directory (here `./infrastructure`) and run the following command:
+
+```powershell
+# for Windows
+./start.ps1
+```
+
+```bash
+# for Linux
+./start.sh
+```
+
 ## Conclusion
 
 By following this guide, you have successfully deployed InfluxDB in Kubernetes using Helm. Ensure to follow best practices for maintaining and securing your deployment.

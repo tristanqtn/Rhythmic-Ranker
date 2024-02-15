@@ -61,6 +61,20 @@ INFLUXDB_ORG: The organization name associated with your InfluxDB instance.
 
 INFLUXDB_BUCKET: The name of the bucket in your InfluxDB instance containing the data you want to display.
 
+## Automation
+
+An automation script for the deployment of this micro service. To run it place yourself in the current directory (here `./interface`) and run the following command:
+
+```powershell
+# for Windows
+./start.ps1
+```
+
+```bash
+# for Linux
+./start.sh
+```
+
 ## Author
 
 - Tristan QUERTON: tristan.querton@edu.ece.fr

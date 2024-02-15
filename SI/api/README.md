@@ -79,6 +79,20 @@ http://<local_ip_address>:<port>
 
 Replace <local_ip_address> with the IP address of the server running the API, and <port> with the port number your Node.js server is listening on. This will be useful when the connected device will be sending the metrics over the network. Ensure that any firewall or security settings on the server allow incoming connections on the specified port.
 
+## Automation
+
+An automation script for the deployment of this micro service. To run it place yourself in the current directory (here `./api`) and run the following command:
+
+```powershell
+# for Windows
+./start.ps1
+```
+
+```bash
+# for Linux
+./start.sh
+```
+
 ## Conclusion
 
 By following this guide, you have successfully deployed a Node.js API on a local server and learned how to access it from other devices on the same network. Ensure to follow security best practices and configure any necessary network settings for secure access.
