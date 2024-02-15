@@ -4,7 +4,7 @@
 echo "Installing npm dependencies..."
 npm install
 
-sleep 10
+sleep 5
 
 # Run npm start
 echo "Running npm start..."

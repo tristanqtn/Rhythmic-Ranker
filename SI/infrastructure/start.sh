@@ -18,7 +18,7 @@ helm install influxdb ./helm/influx -f helm/influx/values.yaml
 
 # Wait for InfluxDB pods to be ready
 echo "Waiting for InfluxDB pods to be ready..."
-kubectl wait --for=condition=Ready pod -l app=influxdb --timeout=300s
+kubectl wait --for=condition=Ready pod influx-stateful-deployment-0 --timeout=300s
 
 # Get pods and services
 echo "Getting pods and services..."

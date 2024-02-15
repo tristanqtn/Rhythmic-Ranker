@@ -47,7 +47,7 @@ app.use("/metrics", userRouter);
 
 const server = app.listen(port, IP, (err) => {
   if (err) throw err;
-  console.log("Server listening the port " + port);
+  console.log(`Server listening the port: http://${IP}:${port}`);
 });
 
 module.exports = server;

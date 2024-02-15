@@ -2,7 +2,7 @@
 Write-Host "Installing npm dependencies..."
 npm install
 
-Start-Sleep -Seconds 10
+Start-Sleep -Seconds 5
 
 # Run npm start
 Write-Host "Running npm start..."

@@ -4,7 +4,7 @@
 echo "Installing Python dependencies..."
 pip install -r requirements.txt --user
 
-sleep 10
+sleep 5
 
 # Run Python backend
 echo "Running Python backend..."
