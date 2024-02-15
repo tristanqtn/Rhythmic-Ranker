@@ -1,8 +1,14 @@
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
+const path = require("path");
+const dotenv = require("dotenv");
 
 const { InfluxDB, Point } = require("@influxdata/influxdb-client");
 const userRouter = express.Router();
+
+const envPath = path.resolve(__dirname, "..", "..", "..", ".env");
+dotenv.config({ path: envPath });
+
 const { INFLUX_URL, INFLUX_TOKEN, INFLUX_ORG, INFLUX_BUCKET } = process.env;
 
 const influxDB = new InfluxDB({
@@ -46,14 +52,11 @@ userRouter
   })
 
   /**
-   * This function handles POST requests for the metric API.
+   * This function handles GET requests for the metric API.
    * @route GET /metrics
-   * @group METRICS - Methods for the user API
-   * @examples {json} "{
-    "sensor": "test",
-    "measurement": 3}"
+   * @group METRICS - Methods for the metric API
    * @returns {object} 200 succes - Returns an array containing all metrics
-   * @returns {Error}  400 error - Problem occurs while reading influx
+   * @returns {Error}  400 error - Problem occurs while reading Influx
    */
   .get("/", (req, resp) => {
     let myArray = [];
