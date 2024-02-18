@@ -2,13 +2,11 @@
 Write-Host "Starting Minikube..."
 minikube start
 
-Start-Sleep -Seconds 10
+Start-Sleep -Seconds 5
 
 # Check Minikube status
 Write-Host "Checking Minikube status..."
 minikube status
-
-Start-Sleep -Seconds 5
 
 # Install Helm chart for InfluxDB
 Write-Host "Installing InfluxDB using Helm..."
@@ -23,7 +21,7 @@ Write-Host "Getting pods and services..."
 kubectl get pods
 kubectl get services
 
-Start-Sleep -Seconds 20
+Start-Sleep -Seconds 10
 
 # Access InfluxDB service
 Write-Host "Accessing InfluxDB service..."

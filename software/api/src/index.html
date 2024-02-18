@@ -10,92 +10,89 @@
       border: 1px solid black;
     }
   </style>
-  <script src=""></script>
   <body>
-    <div class="">
-      <h1>Welcome to PPE DATA INPUT API</h1>
-      <p>
-        Here's a table reviewing all available API methods and the path assigned
-        to these methods:
-      </p>
-      <br />
-      <p>CRUD Operations</p>
-      <table>
-        <tr>
-          <th>Method</th>
-          <th>Path</th>
-          <th>Parameter</th>
-          <th>Usage</th>
-        </tr>
-        <tr>
-          <td>POST</td>
-          <td>/metrics</td>
-          <td>none</td>
-          <td>
-            use this method on given path to add a new metric measurement to the
-            Influx DB. In the post request send a JSON body containing following
-            information: { "sensor": "height", "measurement": 3 }
-          </td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>/metrics</td>
-          <td>none</td>
-          <td>
-            use this method on given path to retrieve all Influx DB entries from
-            the last 60 minutes.
-          </td>
-        </tr>
-      </table>
-      <br />
-      <p>Other Routes</p>
-      <br />
-      <table>
-        <tr>
-          <th>Method</th>
-          <th>Path</th>
-          <th>Parameter</th>
-          <th>Usage</th>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>/api-docs</td>
-          <td>none</td>
-          <td>obtain complete documentation of the API</td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>/health/influx</td>
-          <td>none</td>
-          <td>obtain the health of the INFLUX DB instance</td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>/health/api</td>
-          <td>none</td>
-          <td>obtain the health of the API</td>
-        </tr>
-      </table>
+    <h1>Welcome to PPE DATA INPUT API</h1>
+    <p>
+      Here's a table reviewing all available API methods and the path assigned
+      to these methods:
+    </p>
+    <br />
+    <p>CRUD Operations</p>
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Path</th>
+        <th>Parameter</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/metrics</td>
+        <td>none</td>
+        <td>
+          use this method on given path to add a new metric measurement to the
+          Influx DB. In the post request send a JSON body containing following
+          information: { "sensor": "height", "measurement": 3 }
+        </td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/metrics</td>
+        <td>none</td>
+        <td>
+          use this method on given path to retrieve all Influx DB entries from
+          the last 60 minutes.
+        </td>
+      </tr>
+    </table>
+    <br />
+    <p>Other Routes</p>
+    <br />
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Path</th>
+        <th>Parameter</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/api-docs</td>
+        <td>none</td>
+        <td>obtain complete documentation of the API</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/health/influx</td>
+        <td>none</td>
+        <td>obtain the health of the INFLUX DB instance</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/health/api</td>
+        <td>none</td>
+        <td>obtain the health of the API</td>
+      </tr>
+    </table>
 
-      <br />
+    <br />
+    <p>
+      <strong>IMPORTANT</strong>: This application requires a REDIS DB to work
+      perfectly. If you are using this application on AZURE or in a single
+      Docker container not linked with a REDIS container, API methods won't work
+      for you.
+    </p>
+    <br />
+    <div>
       <p>
-        <strong>IMPORTANT</strong>: This application requires a REDIS DB to work
-        perfectly. If you are using this application on AZURE or in a single
-        Docker container not linked with a REDIS container, API methods won't
-        work for you.
+        <strong>LINKS: </strong>except for the POST: /user/ endpoint other API
+        endpoints require at least one database entry to be used.
       </p>
-      <br />
-      <div>
-        <p>
-          <strong>LINKS: </strong>except for the POST: /user/ endpoint other API
-          endpoints require at least one database entry to be used.
-        </p>
-        <ul>
-          <li><a href="/api-docs">API Docs</a></li>
-          <li><a href="/health/influx">API - Health endpoint</a></li>
-          <li><a href="/health/influx">INFLUX - Health endpoint</a></li>
-        </ul>
-      </div>
+      <ul>
+        <li><a href="/api-docs">API Docs</a></li>
+        <li><a href="/health/influx">API - Health endpoint</a></li>
+        <li><a href="/health/influx">INFLUX - Health endpoint</a></li>
+      </ul>
     </div>
   </body>
 </html>

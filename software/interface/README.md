@@ -7,7 +7,7 @@ This application provides a simple interface to display data from an InfluxDB da
 Before running this application, ensure you have the following installed:
 
 - Python 3.x
-- `pip` package manager
+- `poetry` package manager
 - InfluxDB instance running
 
 ## Installation
@@ -27,7 +27,7 @@ Before running this application, ensure you have the following installed:
 3. Install the required Python packages:
 
    ```bash
-    pip install -r requirements.txt --user
+    poetry install
    ```
 
 Create a .env file in the root directory of the project and specify the required environment variables:
@@ -40,6 +40,12 @@ Create a .env file in the root directory of the project and specify the required
 ```
 
 ## Usage
+
+Don't forget to run this code in the correct venv.
+
+```bash
+poetry shell
+```
 
 Start the Flask server:
 

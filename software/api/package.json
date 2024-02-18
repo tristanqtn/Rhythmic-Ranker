@@ -1,7 +1,7 @@
 {
-  "name": "ece-userapi",
+  "name": "data-api",
   "version": "1.0.0",
-  "description": "User API web application",
+  "description": "PPE: Data Input API",
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon index.js",
@@ -16,21 +16,21 @@
     "@influxdata/influxdb-client-apis": "^1.33.2",
     "axios": "^1.6.3",
     "body-parser": "^1.20.2",
-    "chai": "^5.1.0",
-    "chai-http": "^4.3.0",
     "dotenv": "^16.4.4",
     "express": "^4.17.2",
     "express-swagger-generator": "^1.1.17",
     "mixme": "^1.1.0",
-    "mocha": "^10.3.0",
-    "nodemon": "^3.0.1",
     "npm": "^10.4.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
     "eslint": "^8.9.0",
-    "eslint-plugin-mocha": "^10.0.3"
+    "eslint-plugin-mocha": "^10.0.3",
+    "chai": "^5.1.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.3.0",
+    "nodemon": "^3.0.1"
   },
   "mocha": {
     "timeout": 10000

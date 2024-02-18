@@ -10,8 +10,6 @@ sleep 10
 echo "Checking Minikube status..."
 minikube status
 
-sleep 5
-
 # Install Helm chart for InfluxDB
 echo "Installing InfluxDB using Helm..."
 helm install influxdb ./helm/influx -f helm/influx/values.yaml
@@ -25,7 +23,7 @@ echo "Getting pods and services..."
 kubectl get pods
 kubectl get services
 
-sleep 20
+sleep 10
 
 # Access InfluxDB service
 echo "Accessing InfluxDB service..."

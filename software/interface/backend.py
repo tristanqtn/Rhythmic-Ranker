@@ -1,6 +1,5 @@
 from flask import Flask, render_template, Response
-from influxdb_client import InfluxDBClient, Point
-from influxdb_client.client.write_api import SYNCHRONOUS
+from influxdb_client import InfluxDBClient
 import os
 from dotenv import load_dotenv
 import json
@@ -21,7 +20,6 @@ load_dotenv(dotenv_path)
 client = InfluxDBClient(url=os.getenv("INFLUX_URL"), token=os.getenv("INFLUX_TOKEN"), org=os.getenv("INFLUX_ORG"))
 query_api = client.query_api()
 
-# Function to stream data
 # Function to stream data
 def stream_data():
     query = 'from(bucket: "{}") |> range(start: -1h)'.format(os.getenv("INFLUX_BUCKET"))
