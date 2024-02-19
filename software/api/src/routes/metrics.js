@@ -4,7 +4,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 
 const { InfluxDB, Point } = require("@influxdata/influxdb-client");
-const userRouter = express.Router();
+const metrics = express.Router();
 
 const envPath = path.resolve(__dirname, "..", "..", "..", ".env");
 dotenv.config({ path: envPath });
@@ -24,7 +24,7 @@ process.on("exit", () => {
   writeApi.close();
 });
 
-userRouter
+metrics
   /**
    * This function handles POST requests for the metric API.
    * @route POST /metrics
@@ -64,7 +64,6 @@ userRouter
     queryApi.queryRows(query, {
       next(row, tableMeta) {
         const o = tableMeta.toObject(row);
-        //console.log(`${o._time} ${o._measurement} ${o._field}=${o._value}`);
         myArray.push(o);
       },
       error(error) {
@@ -94,4 +93,4 @@ userRouter
     });
   });
 
-module.exports = userRouter;
+module.exports = metrics;

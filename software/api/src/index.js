@@ -1,6 +1,7 @@
 const express = require("express");
-const userRouter = require("./routes/metrics");
+const metrics = require("./routes/metrics");
 const healthRouter = require("./routes/health");
+const data_stream = require("./routes/stream");
 const bodyParser = require("body-parser");
 const path = require("path");
 const dotenv = require("dotenv");
@@ -43,7 +44,8 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/index.html")));
 
 app.use("/health", healthRouter);
-app.use("/metrics", userRouter);
+app.use("/metrics", metrics);
+app.use("/stream", data_stream);
 
 const server = app.listen(port, IP, (err) => {
   if (err) throw err;
