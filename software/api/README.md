@@ -93,6 +93,14 @@ An automation script for the deployment of this micro service. To run it place y
 ./start.sh
 ```
 
+## Testing
+
+Some basic tests have been implemented to help devs. To run them make sure the InfluxDB is running and that a tunnel is open to that instance. Also make sure the the `env`variables are correctly set.
+
+```bash
+npm run test
+```
+
 ## Conclusion
 
 By following this guide, you have successfully deployed a Node.js API on a local server and learned how to access it from other devices on the same network. Ensure to follow security best practices and configure any necessary network settings for secure access.

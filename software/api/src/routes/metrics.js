@@ -1,5 +1,4 @@
 const express = require("express");
-const { v4: uuidv4 } = require("uuid");
 const path = require("path");
 const dotenv = require("dotenv");
 
@@ -42,7 +41,7 @@ metrics
       "measurement",
       req.body.measurement
     );
-    console.log(`${point1}`);
+    //console.log(`${point1}`);
     writeApi.writePoint(point1);
     let respObj = {
       msg: `${point1}`,
@@ -68,10 +67,10 @@ metrics
       },
       error(error) {
         console.error(error);
-        console.log("\nFinished ERROR");
+        //console.log("\nFinished ERROR");
       },
       complete() {
-        console.log("\nFinished SUCCESS");
+        //console.log("\nFinished SUCCESS");
         // Sort the array by _time in increasing order and _field in alphabetical order
         myArray.sort((a, b) => {
           // Assuming _time is a string representing date/time

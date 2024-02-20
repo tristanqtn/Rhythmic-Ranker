@@ -1,7 +1,15 @@
 const express = require("express");
 const axios = require("axios");
+const path = require("path");
+const dotenv = require("dotenv");
 
 const healthRouter = express.Router();
+
+const envPath = path.resolve(__dirname, "..", "..", "..", ".env");
+dotenv.config({ path: envPath });
+
+const PORT = process.env.DATA_INPUT_API_PORT;
+const IP = process.env.DATA_INPUT_API_IP;
 
 async function checkInfluxDBHealth() {
   try {
@@ -18,7 +26,7 @@ async function checkInfluxDBHealth() {
 
 async function checkAPIHealth() {
   try {
-    const response = await axios.get("http://localhost:3000/metrics");
+    const response = await axios.get(`http://${IP}:${PORT}/metrics`);
     if (response.status === 200) {
       return response.status;
     } else {
