@@ -69,7 +69,7 @@ INFLUXDB_BUCKET: The name of the bucket in your InfluxDB instance containing the
 
 ## Automation
 
-An automation script for the deployment of this micro service. To run it place yourself in the current directory (here `./interface`) and run the following command:
+An automation script for the deployment of this micro service. To run it place yourself in the current directory (here `./interface`), enable a peotry shell with `poetry shell` and run the following command:
 
 ```powershell
 # for Windows

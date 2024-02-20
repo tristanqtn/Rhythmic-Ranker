@@ -1,8 +1,7 @@
 # Install Python dependencies
 Write-Host "Installing Python dependencies..."
-pip install -r requirements.txt --user
+poetry install
 
-# Wait for 1 minute
 Start-Sleep -Seconds 5
 
 # Run Python backend

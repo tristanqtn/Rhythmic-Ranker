@@ -21,7 +21,7 @@ Write-Host "Getting pods and services..."
 kubectl get pods
 kubectl get services
 
-Start-Sleep -Seconds 10
+Start-Sleep -Seconds 20
 
 # Access InfluxDB service
 Write-Host "Accessing InfluxDB service..."

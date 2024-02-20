@@ -23,7 +23,7 @@ echo "Getting pods and services..."
 kubectl get pods
 kubectl get services
 
-sleep 10
+sleep 20
 
 # Access InfluxDB service
 echo "Accessing InfluxDB service..."
