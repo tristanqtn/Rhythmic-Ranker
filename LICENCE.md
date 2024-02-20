@@ -1,16 +1,12 @@
-# LICENCES
+# LICENSES
 
-Le code source de ce dépôt est publié sous [licence MIT](#licence-mit).
+The source code of this repository is published under the [MIT License](#mit-license).
 
-Sauf mention de propriété intellectuelle détenue par des tiers (notamment
-un crédit sur certaines images), les contenus de ce dépôt sont publiés sous [licence Ouverte 2.0](#licence-ouverte-20open-licence-20).
+Unless otherwise stated regarding intellectual property owned by third parties (especially credits on certain images), the contents of this repository are published under the [Open License 2.0](#open-license-20).
 
-La marque d'État est à usage exclusif des acteurs de la sphère
-étatique. En particulier, la typographie Marianne© est protégée par
-le droit d'auteur. [Lire les explications sur le site de la marque
-d'État.](https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/la-typographie)
+The State brand is for the exclusive use of state actors. In particular, the Marianne© typography is protected by copyright. [Read explanations on the State brand website.](https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/la-typographie)
 
-## LICENCE MIT
+## MIT LICENSE
 
 Copyright (c) 2024 Tristan Querton
 
@@ -32,82 +28,80 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## LICENCE OUVERTE 2.0/OPEN LICENCE 2.0
+## OPEN LICENSE 2.0
 
-### Réutilisation de l’« Information » sous cette licence
+### Reuse of "Information" under this license
 
-Le « Concédant » concède au « Réutilisateur » un droit non exclusif et gratuit de libre « Réutilisation » de l’« Information » objet de la présente licence, à des fins commerciales ou non, dans le monde entier et pour une durée illimitée, dans les conditions exprimées ci-dessous.
+The "Licensor" grants the "Reuser" a non-exclusive and free right of free "Reuse" of the "Information" subject to this license, for commercial or non-commercial purposes, worldwide and for an unlimited duration, under the conditions expressed below.
 
-**Le « Réutilisateur » est libre de réutiliser l’« Information » :**
+**The "Reuser" is free to reuse the "Information":**
 
-- de la communiquer, la reproduire, la copier ;
-- de l’adapter, la modifier, l’extraire et la transformer, notamment pour créer des « Informations dérivées » ;
-- de la diffuser, la redistribuer, la publier et la transmettre, de l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans votre propre produit ou application.
+- to communicate, reproduce, copy it;
+- to adapt, modify, extract, and transform it, notably to create "Derived Information";
+- to distribute, redistribute, publish, and transmit it, to exploit it commercially, for example by combining it with other information, or by including it in your own product or application.
 
-**Sous réserve de :**
+**Subject to:**
 
-- mentionner la paternité de l’«Information» : sa source (a minima le nom du « Concédant ») et la date de la dernière mise à jour de l’« Information » réutilisée.
+- mentioning the paternity of the "Information": its source (at least the name of the "Licensor") and the date of the last update of the reused "Information".
 
-Le « Réutilisateur » peut notamment s’ acquitter de cette condition en indiquant l’adresse (URL) renvoyant vers « l’Information » et assurant une mention effective de sa paternité.
+The "Reuser" can in particular fulfill this condition by indicating the address (URL) referring to the "Information" and ensuring an effective mention of its paternity.
 
-**Par exemple :**
+**For example:**
 
-Dans le cas d’une réutilisation de la base SIRENE de l’INSEE, mentionner l’URL du « Concédant » : www.insee.fr + la date de dernière mise à jour de l’Information réutilisée.
+In the case of reuse of the SIRENE database from INSEE, mention the URL of the "Licensor": www.insee.fr + the date of the last update of the reused Information.
 
-Cette mention de paternité ne doit ni conférer un caractère officiel à la « Réutilisation » de l’« Information », ni suggérer une quelconque reconnaissance ou caution par le « Concédant », ou par toute autre entité publique, du « Réutilisateur » ou de sa « Réutilisation ».
+This mention of paternity must neither confer an official character on the "Reuse" of the "Information", nor suggest any recognition or endorsement by the "Licensor", or by any other public entity, of the "Reuser" or its "Reuse".
 
-### Données à caractère personnel
+### Personal data
 
-L’« Information » mise à disposition peut contenir des « Données à caractère personnel » pouvant faire l’objet d’une « Réutilisation ». Alors, le « Concédant » informe le « Réutilisateur » (par tous moyens) de leur présence, l’ « Information » peut être librement réutilisée, sans faire obstacle aux libertés accordées par la présente licence, à condition de respecter le cadre légal relatif à la protection des données à caractère personnel.
+The "Information" made available may contain "Personal Data" that may be subject to "Reuse". Then, the "Licensor" informs the "Reuser" (by any means) of their presence, the "Information" may be freely reused, without obstructing the freedoms granted by this license, provided that the legal framework relating to the protection of personal data is respected.
 
-### Droits de propriété intellectuelle
+### Intellectual property rights
 
-Il est garanti au « Réutilisateur » que l’ « Information » ne contient pas de « Droits de propriété intellectuelle » appartenant à des tiers qui pourraient faire obstacle aux libertés qui lui sont accordées par la présente licence.
+The "Reuser" is guaranteed that the "Information" does not contain any "Intellectual Property Rights" belonging to third parties that could obstruct the freedoms granted to it by this license.
 
-Les éventuels « Droits de propriété intellectuelle » détenus par le « Concédant » sur l’ « Information » ne font pas obstacle aux libertés qui sont accordées par la présente licence. Lorsque le « Concédant » détient des « Droits de propriété intellectuelle » » sur l’ « Information », il les cède au « Réutilisateur » de façon non exclusive, à titre gracieux, pour le monde entier, pour toute la durée des « Droits de propriété intellectuelle », et le « Réutilisateur » peut en faire tout usage conformément aux libertés et aux conditions définies par la présente licence.
+Any "Intellectual Property Rights" held by the "Licensor" on the "Information" do not obstruct the freedoms granted by this license. When the "Licensor" holds "Intellectual Property Rights" on the "Information", it assigns them to the "Reuser" on a non-exclusive basis, free of charge, worldwide, for the entire duration of the "Intellectual Property Rights", and the "Reuser" can use them in any way in accordance with the freedoms and conditions defined by this license.
 
-### Responsabilité
+### Liability
 
-L’ «Information» est mise à disposition telle que produite ou reçue, sans autre garantie expresse ou tacite qui n’est pas prévue par la présente licence. L’absence de défauts ou d’erreurs éventuellement contenues dans l’ «Information», comme la fourniture continue de l’ « Information » n’est pas garantie par le «Concédant». Il ne peut être tenu pour responsable de toute perte, préjudice ou dommage de quelque sorte causé à des tiers du fait de la « Réutilisation ».
+The "Information" is made available as produced or received, without any other express or implied warranty not provided by this license. The absence of defects or errors possibly contained in the "Information", as well as the continuous provision of the "Information", are not guaranteed by the "Licensor". It cannot be held responsible for any loss, damage, or other liability of any kind caused to third parties by the "Reuse".
 
-Le « Réutilisateur » est seul responsable de la « Réutilisation » de l’« Information ».
+The "Reuser" is solely responsible for the "Reuse" of the "Information".
 
-La « Réutilisation » ne doit pas induire en erreur des tiers quant au contenu de l’« Information », sa source et sa date de mise à jour.
+The "Reuse" must not mislead third parties as to the content of the "Information", its source, and its date of update.
 
-### Droit applicable
+### Applicable law
 
-La présente licence est régie par le droit français.
+This license is governed by French law.
 
-#### Compatibilité de la présente licence
+#### Compatibility of this license
 
-Elle a été conçue pour être compatible avec toute licence libre qui exige _a minima_ la mention de paternité. Elle est notamment compatible avec la version antérieure de la présente licence ainsi qu’avec les licences « Open Government Licence » (OGL) du Royaume-Uni, « Creative Commons Attribution » (CC-BY) de Creative Commons et « Open Data Commons Attribution » (ODC-BY) de l’Open Knowledge Foundation.
+It has been designed to be compatible with any free license that requires _at least_ the mention of paternity. It is notably compatible with the previous version of this license as well as with the "Open Government License" (OGL) of the United Kingdom, the "Creative Commons Attribution" (CC-BY) of Creative Commons, and the "Open Data Commons Attribution" (ODC-BY) of the Open Knowledge Foundation.
 
-### Définitions
+### Definitions
 
-Sont considérés, au sens de la présente licence comme :
+Are considered, for the purposes of this license:
 
-- Le « **Concédant** » : toute personne concédant un droit de « Réutilisation » sur l’« Information » dans les libertés et les conditions prévues par la présente licence.
-- L’« **Information** » :
-  - toute information publique figurant dans des documents communiqués ou publiés par une administration mentionnée au premier alinéa de l’article L.300-2 du CRPA ;
-  - toute information mise à disposition par toute personne selon les termes et conditions de la présente licence.
-- La « **Réutilisation** » : l’utilisation de l’« Information » à d’autres fins que celles pour lesquelles elle a été produite ou reçue.
-- Le « **Réutilisateur** » : toute personne qui réutilise les « Informations » conformément aux conditions de la présente licence.
-- Des « **Données à caractère personnel** » : toute information se rapportant à une personne physique identifiée ou identifiable, pouvant être identifiée directement ou indirectement. Leur « Réutilisation » est subordonnée au respect du cadre juridique en vigueur.
-- Une « **Information dérivée** » : toute nouvelle donnée ou information créées directement à partir de l’« Information » ou à partir d’une combinaison de l’ « Information » et d’autres données ou informations non soumises à cette licence.
-- Les « **Droits de propriété intellectuelle** » : tous droits identifiés comme tels par le Code de la propriété intellectuelle (droit d’auteur, droits voisins au droit d’auteur, droit sui generis des producteurs de bases de données).
+- The "**Licensor**": any person granting a right of "Reuse" of the "Information" under the freedoms and conditions provided by this license.
+- The "**Information**":
+  - any public information appearing in documents communicated or published by an administration mentioned in the first paragraph of Article L.300-2 of the CRPA;
+  - any information made available by any person according to the terms and conditions of this license.
+- The "**Reuse**": the use of the "Information" for purposes other than those for which it was produced or received.
+- The "**Reuser**": any person who reuses the "Information" in accordance with the conditions of this license.
+- "**Personal Data**": any information relating to an identified or identifiable natural person, which can be identified directly or indirectly. Their "Reuse" is subject to compliance with the current legal framework.
+- A "**Derived Information**": any new data or information created directly from the "Information" or from a combination of the "Information" and other data or information not subject to this license.
+- The "**Intellectual Property Rights**": all rights identified as such by the Intellectual Property Code (copyright, neighboring rights to copyright, sui generis right of database producers).
 
-### À propos de cette licence
+### About this license
 
-La présente licence a vocation à être utilisée par les administrations pour la réutilisation de leurs informations publiques. Elle peut également être utilisée par toute personne souhaitant mettre à disposition de l’« Information » dans les conditions définies par la présente licence
+This license is intended to be used by administrations for the reuse of their public information. It can also be used by anyone wishing to make "Information" available under the conditions defined by this license.
 
-La France est dotée d’un cadre juridique global visant à une diffusion spontanée par les administrations de leurs informations publiques afin d’en permettre la plus large réutilisation.
+France has a comprehensive legal framework aimed at the spontaneous dissemination by administrations of their public information in order to enable its widest possible reuse.
 
-Le droit de la « Réutilisation » de l’« Information » des administrations est régi par le code des relations entre le public et l’administration (CRPA) et, le cas échéant, le code du patrimoine (livre II relatif aux archives).
+The right to "Reuse" information from administrations is governed by the code of relations between the public and the administration (CRPA) and, where applicable, the heritage code (book II relating to archives).
 
-Cette licence facilite la réutilisation libre et gratuite des informations publiques et figure parmi les licences qui peuvent être utilisées par l’administration en vertu du décret pris en application de l’article L.323-2 du CRPA.
+This license facilitates the free and unrestricted reuse of public information and is among the licenses that can be used by the administration under the decree issued.
 
-Etalab est la mission chargée, sous l’autorité du Premier ministre, d’ouvrir le plus grand nombre de données publiques des administrations de l’État et de ses établissements publics. Elle a réalisé la Licence Ouverte pour faciliter la réutilisation libre et gratuite de ces informations publiques, telles que définies par l’article L321-1 du CRPA.
+---
 
-Cette licence est une version 2.0 de la Licence Ouverte.
-
-Etalab se réserve la faculté de proposer de nouvelles versions de la Licence Ouverte. Cependant, les « Réutilisateurs » pourront continuer à réutiliser les informations disponibles sous cette licence s’ils le souhaitent.
+**Note:** Datasets won't be shared with users.

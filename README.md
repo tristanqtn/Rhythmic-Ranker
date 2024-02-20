@@ -2,15 +2,15 @@
 
 ## Overview
 
-RhythmicRanker is a cutting-edge solution designed to revolutionize the scoring process in rhythmic gymnastics competitions. Leveraging advanced technology, our solution aims to enhance accuracy, fairness, and efficiency in evaluating gymnastic performances. By integrating real-time data acquisition, artificial intelligence analysis, and intuitive presentation modules, RhythmicRanker provides judges with comprehensive insights, facilitating informed scoring decisions.
+Rythmic Ranker is a cutting-edge solution designed to revolutionize the scoring process in rhythmic gymnastics competitions. Leveraging advanced technology, our solution aims to enhance accuracy, fairness, and efficiency in evaluating gymnastic performances. By integrating real-time data acquisition, artificial intelligence analysis, and intuitive presentation modules, Rhythmic Ranker provides judges with comprehensive insights, facilitating informed scoring decisions.
 
 ## Goal
 
-The primary goal of RhythmicRanker is to address the inherent challenges and limitations associated with traditional scoring methods in rhythmic gymnastics. These challenges often stem from subjective interpretations, human error, and inefficiencies in data processing. RhythmicRanker seeks to overcome these obstacles by introducing a data-driven approach that ensures objective assessment based on measurable criteria.
+The primary goal of Rhythmic Ranker is to address the inherent challenges and limitations associated with traditional scoring methods in rhythmic gymnastics. These challenges often stem from subjective interpretations, human error, and inefficiencies in data processing. Rhythmic Ranker seeks to overcome these obstacles by introducing a data-driven approach that ensures objective assessment based on measurable criteria.
 
 ## Solution Components
 
-RhythmicRanker comprises three core components:
+Rhythmic Ranker comprises three core components:
 
 1. **Data Acquisition Interface:** Responsible for receiving continuous data streams from gymnastic performance capture systems via an API. These metrics are then stored in a dedicated NoSQL database to facilitate seamless data management and scalability.
 
@@ -28,24 +28,24 @@ RhythmicRanker comprises three core components:
 
 ## Legal Considerations
 
-RhythmicRanker recognizes the importance of data security and legal compliance. To address these concerns, the solution incorporates robust security measures to safeguard data integrity and confidentiality during competitions. Additionally, clear guidelines are established for the external usage and exploitation of the solution to ensure compliance with relevant laws and regulations.
+Rhythmic Ranker recognizes the importance of data security and legal compliance. To address these concerns, the solution incorporates robust security measures to safeguard data integrity and confidentiality during competitions. Additionally, clear guidelines are established for the external usage and exploitation of the solution to ensure compliance with relevant laws and regulations. Please refer to [LICENCE.md](./LICENCE.md).
 
 ## Getting Started
 
-This repository contains the code and all electronic documentation necessary to recreate the RhythmicRanker project. To get started, please refer to the installation and usage instructions provided in the documentation. For any inquiries or support, feel free to contact our team.
+This repository contains the code and all electronic documentation necessary to recreate the Rhythmic Ranker project. To get started, please refer to the installation and usage instructions provided in the documentation. For any inquiries or support, feel free to contact our team.
 
 ## Open Innovation
 
-RhythmicRanker is committed to open innovation, fostering collaboration and knowledge-sharing within the gymnastics community. We encourage contributions, feedback, and ideas from all stakeholders to continually improve and expand the capabilities of our solution.
+Rhythmic Ranker is committed to open innovation, fostering collaboration and knowledge-sharing within the gymnastics community. We encourage contributions, feedback, and ideas from all stakeholders to continually improve and expand the capabilities of our solution (but please respect the rules given in [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
 ## Installation
 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/tristanqtn/RhythmicRanker
+   git clone https://github.com/tristanqtn/Rhythmic Ranker
    ```
 
    ```bash
-   cd RhythmicRanker
+   cd Rhythmic Ranker
    ```

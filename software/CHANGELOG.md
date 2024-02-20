@@ -2,21 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.0.0] - 2024-02-20
 
 ### Added
 
 - Jury interface.
 - Metric Reception API documentation.
 - Automation scripts for deployment.
+- Tests for Data Input API.
+- Heatlh checks for Data Input API.
 
 ### Changed
 
 - Updated packages.
 - Env management.
 - Repo architecture of the software part.
+- Switched from pip to poetry.
 
-## [1.0.0] - 2023-12-27
+## [0.2.0] - 2023-12-27
 
 ### Added
 
