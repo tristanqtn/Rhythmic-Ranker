@@ -67,6 +67,32 @@ INFLUXDB_ORG: The organization name associated with your InfluxDB instance.
 
 INFLUXDB_BUCKET: The name of the bucket in your InfluxDB instance containing the data you want to display.
 
+## API Routes
+
+### CRUD Operations
+
+**GET /api/stream**
+
+- **Parameter:** none
+- **Usage:**
+  Use this method on the given path to connect to the continuous data stream, sending all data from the last hour stored in the InfluxDB.
+
+### Other Routes
+
+**GET /api/health/influx**
+
+- **Parameter:** none
+- **Usage:**
+  Obtain the health of the INFLUX DB instance.
+
+**GET /api/health/api**
+
+- **Parameter:** none
+- **Usage:**
+  Obtain the health of the backend.
+
+**IMPORTANT**: This application requires an InfluxDB to work perfectly. If you don't have one, you can use the one provided by using the Helm deployment in this repo.
+
 ## Automation
 
 An automation script for the deployment of this micro service. To run it place yourself in the current directory (here `./interface`), enable a peotry shell with `poetry shell` and run the following command:
@@ -79,6 +105,30 @@ An automation script for the deployment of this micro service. To run it place y
 ```bash
 # for Linux
 ./start.sh
+```
+
+## Testing
+
+Pytest has been installed as a dev dependency to cover the backend of the application with tests. You can run tests on the backend of this part of the software:
+
+```bash
+poetry shell
+```
+
+```bash
+pytest
+```
+
+## Linters
+
+Ruff has been installed as a dev dependency in order to lint the code. You can run the linter has so:
+
+```bash
+poetry shell
+```
+
+```bash
+ruff check
 ```
 
 ## Author

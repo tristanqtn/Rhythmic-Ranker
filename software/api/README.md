@@ -79,6 +79,50 @@ http://<local_ip_address>:<port>
 
 Replace <local_ip_address> with the IP address of the server running the API, and <port> with the port number your Node.js server is listening on. This will be useful when the connected device will be sending the metrics over the network. Ensure that any firewall or security settings on the server allow incoming connections on the specified port.
 
+## API Routes
+
+### CRUD Operations
+
+**POST /metrics**
+
+- **Parameter:** none
+- **Usage:**
+  Use this method on the given path to add a new metric measurement to the Influx DB. In the post request send a JSON body containing the following information: `{ "sensor": "height", "measurement": 3 }`.
+
+**GET /metrics**
+
+- **Parameter:** none
+- **Usage:**
+  Use this method on the given path to retrieve all Influx DB entries from the last 60 minutes.
+
+**GET /stream**
+
+- **Parameter:** none
+- **Usage:**
+  Use this method on the given path to obtain a continuous stream of InfluxDB content.
+
+### Other Routes
+
+**GET /api-docs**
+
+- **Parameter:** none
+- **Usage:**
+  Obtain complete documentation of the API.
+
+**GET /health/influx**
+
+- **Parameter:** none
+- **Usage:**
+  Obtain the health of the INFLUX DB instance.
+
+**GET /health/api**
+
+- **Parameter:** none
+- **Usage:**
+  Obtain the health of the API.
+
+**IMPORTANT**: This application requires an InfluxDB to work perfectly. If you don't have one, you can use the one provided by using the Helm deployment in this repo.
+
 ## Automation
 
 An automation script for the deployment of this micro service. To run it place yourself in the current directory (here `./api`) and run the following command:

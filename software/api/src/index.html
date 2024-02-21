@@ -86,17 +86,12 @@
 
     <br />
     <p>
-      <strong>IMPORTANT</strong>: This application requires a REDIS DB to work
-      perfectly. If you are using this application on AZURE or in a single
-      Docker container not linked with a REDIS container, API methods won't work
-      for you.
+      <strong>IMPORTANT</strong>: This application requires an InfluxDB to work
+      perfectly. If you don't have one, you can use the one provided by using
+      the Helm deployment in this repo.
     </p>
     <br />
     <div>
-      <p>
-        <strong>LINKS: </strong>except for the POST: /user/ endpoint other API
-        endpoints require at least one database entry to be used.
-      </p>
       <ul>
         <li><a href="/api-docs">API Docs</a></li>
         <li><a href="/stream">Data Stream</a></li>

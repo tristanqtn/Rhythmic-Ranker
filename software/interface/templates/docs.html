@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPE: InfluxDB Interface</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <div id="docs">
+      <h1>Documentation</h1>
+      <p>
+        Here's a table reviewing all available API methods and the path assigned
+        to these methods:
+      </p>
+      <br />
+      <p>CRUD Operations</p>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Path</th>
+          <th>Parameter</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/api/stream</td>
+          <td>none</td>
+          <td>
+            use this method on given path to connect to the continous data
+            stream sending all data from the last hour stored in the InfluxDB
+          </td>
+        </tr>
+      </table>
+      <br />
+      <p>Other Routes</p>
+      <br />
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Path</th>
+          <th>Parameter</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/api/health/influx</td>
+          <td>none</td>
+          <td>obtain the health of the INFLUX DB instance</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/api/health/api</td>
+          <td>none</td>
+          <td>obtain the health of the backend</td>
+        </tr>
+      </table>
+
+      <br />
+      <p>
+        <strong>IMPORTANT</strong>: This application requires an InfluxDB to
+        work perfectly. If you don't have one, you can use the one provided by
+        using the Helm deployment in this repo.
+      </p>
+      <br />
+      <div>
+        <ul>
+          <li><a href="/api/docs">Documentation</a></li>
+          <li><a href="/api/stream">Data Stream</a></li>
+          <li><a href="/api/health/influx">API - Health endpoint</a></li>
+          <li><a href="/api/health/influx">INFLUX - Health endpoint</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

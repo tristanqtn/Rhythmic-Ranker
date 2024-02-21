@@ -24,6 +24,12 @@ query_api = client.query_api()
 
 # Function to stream data
 def stream_data():
+    """
+    Stream data from a specified InfluxDB bucket in real-time.
+    
+    Returns:
+        str: Server-sent events (SSE) containing the streamed data.
+    """
     query = 'from(bucket: "{}") |> range(start: -1h)'.format(os.getenv("INFLUX_BUCKET"))
     while True:
         tables = query_api.query(query)
@@ -42,10 +48,26 @@ def stream_data():
 # API endpoint to stream data
 @app.route('/api/stream')
 def stream():
+    """
+    Stream endpoint that streams data from a specified InfluxDB bucket in real-time. 
+    
+    Tags: backend, streaming
+
+    Returns:
+        Response: Server-sent events (SSE) containing the streamed data.
+    """
     return Response(stream_data(), mimetype='text/event-stream')
 
 # Function to check InfluxDB health
 def check_influxdb_health():
+    """
+    Check the health status of the connected InfluxDB database. This function uses the `ready` method of the InfluxDB client to check the health of the InfluxDB database. If the `ready` method returns a non-empty response, the function returns True, indicating that InfluxDB is healthy. If the `ready` method raises an exception or returns an empty response, the function returns False, indicating that InfluxDB is not healthy.
+
+    Tags: InfluxDB, health check, monitoring
+    
+    Returns:
+        bool: True if InfluxDB is healthy, False otherwise.
+    """
     try:
         ping_response = client.ready()
         if ping_response:
@@ -57,6 +79,14 @@ def check_influxdb_health():
 # API endpoint to check InfluxDB health
 @app.route('/api/health/influx')
 def influx_health():
+    """
+    Check the health status of the connected InfluxDB database. 
+
+    Tags: InfluxDB, health check, monitoring
+
+    Returns:
+        Response: JSON response containing the health status.
+    """
     health_check = {
         "uptime": time.time() - app.start_time,
         "status": "OK",
@@ -71,6 +101,14 @@ def influx_health():
 # API endpoint to check backend health
 @app.route('/api/health/backend')
 def backend_health():
+    """
+    Check the health status of the backend server hosting the API.
+    
+    Tags: health check, backend, monitoring
+
+    Returns:
+        Response: JSON response containing the health status.
+    """
     health_check = {
         "uptime": time.time() - app.start_time,
         "status": "OK",
@@ -82,6 +120,10 @@ def backend_health():
 def index():
     data = stream_data()
     return render_template('./index.html', data=data)
+
+@app.route('/api/docs')
+def docs():
+    return render_template('./docs.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
