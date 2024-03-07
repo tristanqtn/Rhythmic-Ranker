@@ -1,10 +1,12 @@
 #!/bin/bash
+# requires InfluxDB cluster and correct connection credentials in .env file
 
 # Install Python dependencies
 echo "Installing Python dependencies..."
 poetry install
 
-sleep 5
+echo "Testing env and application..."
+pytest
 
 # Run Python backend
 echo "Running Python backend..."

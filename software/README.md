@@ -2,15 +2,16 @@
 
 ## Overview
 
-This is a Node.js API application connected to an InfluxDB backend. The API serves as a bridge between your frontend applications or other services and the InfluxDB database, providing endpoints for data retrieval, manipulation, and storage.
+This application receives data in a JSON format from the connected device. This data enters the application with the Node.js API that converts it and then send it to an InfluxDB cluster. On the other side of the application a Python backend sends request to InfluxDB to produce a continuous data stream that feeds the jury's interface.
 
 ## Prerequisites
 
-Before running the API, ensure the following prerequisites are met:
+Before running the application, ensure the following prerequisites are met:
 
-- Node.js and npm are installed on your local machine.
-- InfluxDB instance is deployed on Kubernetes using Helm.
-- Helm and Kubernetes cluster are set up and accessible.
+- Node.js and NPM
+- Python and Poetry
+- Minikube, Kubectl, Helm
+- Docker
 
 ## Installation
 
@@ -26,9 +27,21 @@ Before running the API, ensure the following prerequisites are met:
 
 ## Configuration
 
-Ensure that your API is configured to connect to the deployed InfluxDB instance. Update the connection settings in the configuration file or environment variables as needed.
+Ensure that your application is configured to connect to the deployed InfluxDB instance. Update the connection settings in the configuration file or environment variables `.env` as needed.
 
 ## Usage
+
+An script automating the deployment of the whole software has been created. This script will only require the configuration of the InfluxDB cluster inside the web adminstrator page. Make sure to have the correct values inside the `.env` file concerning the InfluxDB credentials and the API endpoint. To run the scripts:
+
+```powershell
+# for Windows
+./start.ps1
+```
+
+```bash
+# for Linux
+./start.sh
+```
 
 Deployment procedure for InfluxDB: [deployment](./infrastructure/README.md)
 
