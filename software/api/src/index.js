@@ -15,7 +15,7 @@ const IP = process.env.DATA_INPUT_API_IP;
 let options = {
   swaggerDefinition: {
     info: {
-      description: "This is a sample server",
+      description: "Data Input API Endpoint",
       title: "Swagger",
       version: "1.0.0",
     },

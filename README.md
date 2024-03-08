@@ -43,9 +43,9 @@ Rhythmic Ranker is committed to open innovation, fostering collaboration and kno
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/tristanqtn/Rhythmic Ranker
+   git clone https://github.com/tristanqtn/Rhythmic-Ranker
    ```
 
    ```bash
-   cd Rhythmic Ranker
+   cd Rhythmic-Ranker
    ```

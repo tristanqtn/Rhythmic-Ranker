@@ -29,3 +29,9 @@ def test_health_backend(client):
     data = json.loads(response.data.decode('utf-8'))
     assert response.status_code == 200
     assert data["status"] == "OK"  # Assuming the health check always returns "OK" for simplicity
+
+def test_health_input_api(client):
+    response = client.get('/api/health/api')
+    data = json.loads(response.data.decode('utf-8'))
+    assert response.status_code == 200
+    assert data["status"] == "OK"  # Assuming the health check always returns "OK" for simplicity

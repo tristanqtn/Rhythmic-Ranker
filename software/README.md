@@ -18,11 +18,11 @@ Before running the application, ensure the following prerequisites are met:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/tristanqtn/RhythmicRanker
+   git clone https://github.com/tristanqtn/Rhythmic-Ranker
    ```
 
    ```bash
-   cd RhythmicRanker
+   cd Rhythmic-Ranker
    ```
 
 ## Configuration

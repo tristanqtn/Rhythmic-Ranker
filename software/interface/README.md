@@ -15,13 +15,13 @@ Before running this application, ensure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/tristanqtn/RhythmicRanker
+   git clone https://github.com/tristanqtn/Rhythmic-Ranker
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd RhythmicRanker/SI/interface
+   cd Rhythmic-Ranker/SI/interface
    ```
 
 3. Install the required Python packages:

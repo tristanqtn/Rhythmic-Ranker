@@ -3,37 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PPE: InfluxDB Interface</title>
+    <title>PPE: Interface Jury</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin: 0;
+      }
+
+      #app {
+        padding: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .health-checks {
+        margin: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f2f2f2;
+      }
+
+      .health-check-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+      }
+
+      .health-check-status {
+        font-weight: bold;
+        margin-right: 10px;
+        flex-basis: 10%;
+        text-align: center;
+      }
+
+      .health-check-name {
+        flex-basis: 60%;
+      }
+
+      .health-check-uptime {
+        flex-basis: 30%;
+        text-align: right;
+      }
+
+      .health-check-status-ok {
+        color: green;
+      }
+
+      .health-check-status-error {
+        color: red;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>Jury's Interface</h1>
-    <div id="app">
-      <!-- Data will be displayed here -->
+    <h1>Interface Jury</h1>
+    <div class="health-checks">
+      <h2>Mesures en temps réel</h2>
+      <div id="app">
+        <!-- Data will be displayed here -->
+      </div>
+    </div>
+    <div class="health-checks">
+      <h2>Santé des services</h2>
+      <div id="health-checks">
+        <p>Chargement de la santé des services ...</p>
+      </div>
     </div>
 
     <script>
       const eventSource = new EventSource("/api/stream");
+      const lastValues = {};
 
       eventSource.onmessage = function (event) {
-        const data = JSON.parse(event.data);
-        // Process 'data' and display it as needed
-        console.log(data);
-        // Example: Render data as a table
-        const table = document.createElement("table");
+        console.log("Received message:", event.data);
+        let data;
+        try {
+          data = JSON.parse(event.data);
+        } catch (error) {
+          console.error("Error parsing JSON:", error);
+          return;
+        }
+
+        // If data is not an array, wrap it in an array
+        if (!Array.isArray(data)) {
+          data = [data];
+        }
+
+        // Update lastValues object with new values
         data.forEach((row) => {
+          const timestamp = new Date(row._time).getTime();
+          const field = row._measurement;
+          const value = row._value;
+
+          if (!lastValues[field] || lastValues[field].timestamp < timestamp) {
+            lastValues[field] = { timestamp, value };
+          }
+        });
+
+        // Clear existing content
+        const appDiv = document.getElementById("app");
+        appDiv.innerHTML = "";
+
+        // Display the last values
+        const table = document.createElement("table");
+        Object.entries(lastValues).forEach(([field, { timestamp, value }]) => {
           const tr = document.createElement("tr");
-          Object.values(row).forEach((value) => {
-            const td = document.createElement("td");
-            td.textContent = value;
-            tr.appendChild(td);
-          });
+          const timestampTd = document.createElement("td");
+          timestampTd.textContent = new Date(timestamp).toLocaleString();
+          const fieldTd = document.createElement("td");
+          fieldTd.textContent = field;
+          const valueTd = document.createElement("td");
+          valueTd.textContent = value;
+          //tr.appendChild(timestampTd);
+          tr.appendChild(fieldTd);
+          tr.appendChild(valueTd);
           table.appendChild(tr);
         });
-        const appDiv = document.getElementById("app");
-        appDiv.innerHTML = ""; // Clear existing content
         appDiv.appendChild(table);
       };
+    </script>
+    <script>
+      // Add a function to fetch health check status
+      async function fetchHealthCheck(url) {
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error("Error fetching health check:", error);
+          return { status: "ERROR" };
+        }
+      }
+
+      function displayHealthChecks(healthChecks) {
+        const healthChecksDiv = document.getElementById("health-checks");
+        healthChecksDiv.innerHTML = "";
+
+        healthChecks.forEach(({ name, status, uptime }) => {
+          const healthCheckItemDiv = document.createElement("div");
+          healthCheckItemDiv.className = "health-check-item";
+
+          const statusSpan = document.createElement("span");
+          statusSpan.className = `health-check-status health-check-status-${status.toLowerCase()}`;
+          statusSpan.textContent = status;
+
+          const nameSpan = document.createElement("span");
+          nameSpan.className = "health-check-name";
+          nameSpan.style.color =
+            status.toLowerCase() === "ok" ? "green" : "red";
+          nameSpan.textContent = name;
+
+          const uptimeSpan = document.createElement("span");
+          uptimeSpan.className = "health-check-uptime";
+          uptimeSpan.textContent = `Disponibilité: ${uptime}`;
+
+          healthCheckItemDiv.appendChild(statusSpan);
+          healthCheckItemDiv.appendChild(nameSpan);
+          healthCheckItemDiv.appendChild(uptimeSpan);
+
+          healthChecksDiv.appendChild(healthCheckItemDiv);
+        });
+      }
+
+      // Fetch and display health check status for the endpoints every 2 seconds
+      setInterval(async function () {
+        const endpoints = [
+          { name: "Base temporelle InfluxDB", url: "/api/health/influx" },
+          { name: "Service analytique", url: "/api/health/backend" },
+          { name: "Interface engins", url: "/api/health/api" },
+
+          // Add more endpoints as needed
+        ];
+
+        const healthCheckPromises = endpoints.map(({ url }) =>
+          fetchHealthCheck(url)
+        );
+        const healthChecks = await Promise.all(healthCheckPromises);
+
+        displayHealthChecks(
+          endpoints.map((endpoint, index) => ({
+            ...endpoint,
+            status: healthChecks[index].status,
+            uptime: healthChecks[index].uptime,
+          }))
+        );
+      }, 1000);
     </script>
   </body>
 </html>

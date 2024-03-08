@@ -1,6 +1,7 @@
 from flask import Flask, render_template, Response, jsonify
 from influxdb_client import InfluxDBClient
 import os
+import requests
 from dotenv import load_dotenv
 import json
 import time
@@ -43,7 +44,7 @@ def stream_data():
                     "_measurement": record.get_measurement()
                 })
         yield "data: {}\n\n".format(json.dumps(data))
-        time.sleep(2)  # Adjust the sleep time as needed
+        time.sleep(1)  # Adjust the sleep time as needed
 
 # API endpoint to stream data
 @app.route('/api/stream')
@@ -115,6 +116,37 @@ def backend_health():
         "timestamp": int(time.time())
     }
     return jsonify(health_check), 200
+
+# API endpoint to check InfluxDB health
+@app.route('/api/health/api')
+def api_health():
+    """
+    Check the health status of the data inout API endpoint. This forwards the health check request to the data input API and returns the response.
+
+    Tags: API, health check, monitoring
+
+    Returns:
+        Response: JSON response containing the health status.
+    """
+     # Load IP and port from environment variables
+    ip = os.getenv('DATA_INPUT_API_IP')
+    port = os.getenv('DATA_INPUT_API_PORT')
+
+    # Construct the target URL
+    target_url = f'http://{ip}:{port}/health/influx'
+
+    try:
+        # Forward the request to the target URL
+        response = requests.get(target_url)
+        response.raise_for_status()
+
+        # Return the response from the target URL
+        return response.json(), response.status_code
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error forwarding request: {e}")
+        return jsonify({"status": "ERROR"}), 500
+
 
 @app.route('/')
 def index():
