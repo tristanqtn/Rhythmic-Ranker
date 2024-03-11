@@ -37,14 +37,16 @@ def stream_data():
         data = []
         for table in tables:
             for record in table.records:
-                data.append({
-                    "_time": record.get_time().strftime('%Y-%m-%dT%H:%M:%SZ'),  # Convert datetime to string
-                    "_value": record.get_value(),
-                    "_field": record.get_field(),
-                    "_measurement": record.get_measurement()
-                })
+                # do not append if sensor name is npm_test
+                if record.get_measurement() != "npm_test":
+                    data.append({
+                        "_time": record.get_time().strftime('%Y-%m-%dT%H:%M:%SZ'),  # Convert datetime to string
+                        "_value": record.get_value(),
+                        "_field": record.get_field(),
+                        "_measurement": record.get_measurement()
+                    })
         yield "data: {}\n\n".format(json.dumps(data))
-        time.sleep(1)  # Adjust the sleep time as needed
+        time.sleep(0.1)  # Adjust the sleep time as needed
 
 # API endpoint to stream data
 @app.route('/api/stream')
@@ -96,7 +98,7 @@ def influx_health():
     if check_influxdb_health():
         return jsonify(health_check), 200
     else:
-        health_check["status"] = "InfluxDB not healthy"
+        health_check["status"] = "ERROR"
         return jsonify(health_check), 503
 
 # API endpoint to check backend health

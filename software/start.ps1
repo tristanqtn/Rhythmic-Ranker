@@ -24,7 +24,7 @@ pause
 Write-Host "`nDeploying api endpoint..."
 $apiPath = Join-Path -Path $PSScriptRoot -ChildPath "api"
 try{
-    Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { Set-Location $apiPath; npm i; npm run start; }"
+    Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { Set-Location $apiPath; npm i; npm run test; npm run start; }"
     Start-Sleep -Seconds 5
 }
 catch {
@@ -36,7 +36,7 @@ catch {
 Write-Host "`nDeploying interface..."
 $interfacePath = Join-Path -Path $PSScriptRoot -ChildPath "interface"
 try {
-    Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { Set-Location $interfacePath; poetry install; python backend.py; }"
+    Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { Set-Location $interfacePath; poetry install; pytest; python backend.py; }"
     Start-Sleep -Seconds 5
 }
 catch {

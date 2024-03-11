@@ -10,7 +10,7 @@ describe("Metrics API", () => {
       .request(app)
       .post("/metrics")
       .send({
-        sensor: "testSensor",
+        sensor: "npm_test",
         measurement: 42,
       })
       .end((err, res) => {

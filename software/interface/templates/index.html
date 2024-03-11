@@ -198,9 +198,17 @@
       // Fetch and display health check status for the endpoints every 2 seconds
       setInterval(async function () {
         const endpoints = [
-          { name: "Base temporelle InfluxDB", url: "/api/health/influx" },
-          { name: "Service analytique", url: "/api/health/backend" },
           { name: "Interface engins", url: "/api/health/api" },
+
+          { name: "Base temporelle InfluxDB", url: "/api/health/influx" },
+          {
+            name: "Serveur Jury ",
+            url: "/api/health/backend",
+          },
+          {
+            name: "Service analytique",
+            url: "/api/health/backend",
+          },
 
           // Add more endpoints as needed
         ];
